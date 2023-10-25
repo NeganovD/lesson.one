@@ -20,7 +20,6 @@ public class Main {
         double c = 5;
         System.out.println("Площадь треугольника с произовльными сторонами " + a + "," + b + "," + c + " = " + calculateЕriangleArea(a, b, c));
         System.out.println();
-
     }
 
     private static String calculateЕriangleArea(double a, double b, double c) {
@@ -34,12 +33,10 @@ public class Main {
 
     private static double calculateCircleArea(double r, double pi) {
         return pi * r * r;
-
     }
 
     private static int calculateSquareArea(int x) {
         return x * x;
-
     }
 }
 
