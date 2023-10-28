@@ -9,31 +9,33 @@ public class Main {
         System.out.println();
 
         //Площадь круга
-        double pi = 3.14;
         double r = 10;
-        System.out.println("Площадь круга с радиусом " + r + " = " + calculateCircleArea(r, pi));
+        System.out.println("Площадь круга с радиусом " + r + " = " + calculateCircleArea(r));
         System.out.println();
 
         //Площадь треугольника
         double a = 2;
-        double b = 5;
+        double b = 3;
         double c = 5;
-        System.out.println("Площадь треугольника с произовльными сторонами " + a + "," + b + "," + c + " = " + calculateЕriangleArea(a, b, c));
+        if (calculateЕriangleArea(a, b, c) != null){
+            System.out.println("Площадь треугольника с произовльными сторонами " + a + "," + b + "," + c + " = " + calculateЕriangleArea(a, b, c));
+        }
         System.out.println();
 
     }
 
-    private static String calculateЕriangleArea(double a, double b, double c) {
+    private static Double calculateЕriangleArea(double a, double b, double c) {
         if ((a + b <= c) || (a + c <= b) || (b + c <= a)) {
-            return "Это не может быть треугольником";
+            System.out.println( "Это не может быть треугольником");
+            return null;
         } else {
             double p = (a + b + c) / 2;
-            return String.valueOf((Math.sqrt(p * (p - a) * (p - b) * (p - c))));
+            return (Math.sqrt(p * (p - a) * (p - b) * (p - c)));
         }
     }
 
-    private static double calculateCircleArea(double r, double pi) {
-        return pi * r * r;
+    private static double calculateCircleArea(double r) {
+        return Math.PI * r * r;
 
     }
 
